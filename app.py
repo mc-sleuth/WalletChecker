@@ -32,7 +32,7 @@ def filter_items_by_value_and_sort(data, threshold=10):
 def print_asset_info(asset):
     """Print information about an asset."""
     worth = asset.get('price', 0) * asset.get('amount', 0)
-    print(f"{asset.get('symbol', 'N/A')}: ${worth:,.2f} ({asset.get('amount', 0):,.2f} ${asset.get('symbol','N/A')})")
+    print(f"{asset.get('symbol', 'N/A')}: ${worth:,.2f} ({round(asset.get('amount', 0),2)} ${asset.get('symbol','N/A')})")
 
 def plot_pie_chart(token_aggregate):
     """Plot a pie chart of token distribution."""
@@ -76,7 +76,7 @@ def get_assets_for_multiple_users_and_plot(user_ids, plot_pie):
 
     for token, worth in sorted_tokens_by_worth:
         amount = token_amounts[token]
-        print(f"{token}: ${worth:,.2f} ({amount:,.2f} ${token})")
+        print(f"{token}: ${worth:,.2f} ({round(amount,2)} ${token})")
 
     print(f"---\nTotal: ${overall_total_worth:,.2f}")
 
