@@ -99,13 +99,16 @@ pip install -r requirements.txt
 - Open the script in a text editor. If you're not sure which editor to use, Notepad (Windows), TextEdit (Mac), or any basic code editor will work.
 - Look for the `wallet_addresses` list and replace the placeholder addresses with your own. Save your changes.
 
+6. **Obtain API keys**:
+- **Debank API Key**: Obtain API credits from Debank. $200 buys 1 million credits, which should suffice for this project. Purchase credits at [Debank Open API](https://cloud.debank.com/open-api) by selecting "Purchase Units".
+- Then look for the `Access key` and copy paste it, this is your Debank API key.
+
 6. **Set Up Environment Variables**:
 
 - Rename the provided `sample.env` file to `.env`. Open it in your text editor and fill in your API keys:
 
   ```
   DEBANK_API_KEY=your_debank_api_key_here
-  FREECURRENCYAPI_KEY=your_freecurrencyapi_key_here
   ```
 
 7. **Run the Script**:
